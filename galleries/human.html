@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body data-hall="human" class="page-gallery">
+  <audio id="bg-music" src="../assets/sounds/background.mp3" loop preload="auto" autoplay playsinline></audio>
+  <script>
+  (function(){var a=document.getElementById("bg-music");if(!a)return;a.volume=0.28;try{if(sessionStorage.getItem("bgMusicUserPaused")==="1")return}catch(e){}var p=a.play();if(p&&p.catch)p.catch(function(){a.muted=true;a.play().catch(function(){})})})();
+  </script>
+  <script src="../js/bg-music-boot.js"></script>
+  <div id="page-root">
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
+  <div class="page-vignette" aria-hidden="true"></div>
+  <header class="site-header site-header--inner" id="site-header"></header>
+  <main class="gallery-main">
+    <section class="gallery-hero">
+      <div class="gallery-hero__visual" aria-hidden="true">
+        <img class="gallery-hero__poster" id="gallery-poster" alt="">
+        <canvas id="gallery-hero-art" class="gallery-hero__art"></canvas>
+      </div>
+      <div class="gallery-hero__overlay">
+        <a href="../index.html#exhibitions" class="gallery-back btn-glow" id="gallery-back"></a>
+        <p class="gallery-hero__label" id="gallery-label"></p>
+        <h1 class="gallery-hero__title-zh" id="gallery-title-zh"></h1>
+        <p class="gallery-hero__title-en" id="gallery-hero-en"></p>
+        <span class="gallery-hero__line" aria-hidden="true"></span>
+        <p class="gallery-hero__tag" id="gallery-tag"></p>
+        <p class="gallery-hero__intro" id="gallery-intro"></p>
+      </div>
+    </section>
+    <section class="gallery-archive">
+      <header class="gallery-archive__head">
+        <p class="gallery-archive__label">Featured Sound Collection</p>
+        <h2 id="page-archive-title" class="gallery-archive__title"></h2>
+        <p class="gallery-archive__sub" id="page-archive-sub"></p>
+      </header>
+      <div id="track-list" class="track-list"></div>
+    </section>
+  </main>
+  </div>
+  <button type="button" class="music-toggle btn-glow" id="home-music-toggle" aria-pressed="false" aria-label="播放背景音乐" title="背景音乐">
+    <span class="music-toggle__ring"></span>
+    <svg class="music-toggle__icon music-toggle__icon--on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+    <svg class="music-toggle__icon music-toggle__icon--off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><line x1="3" y1="3" x2="21" y2="21"/></svg>
+  </button>
+  <button type="button" class="music-toggle btn-glow" id="music-toggle" aria-pressed="false" aria-label="播放背景音乐" title="背景音乐">
+    <span class="music-toggle__ring"></span>
+    <svg class="music-toggle__icon music-toggle__icon--on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+    <svg class="music-toggle__icon music-toggle__icon--off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><line x1="3" y1="3" x2="21" y2="21"/></svg>
+  </button>
+  <audio id="track-player" preload="auto"></audio>
+  <script src="../js/data.js"></script>
+  <script src="../js/hall-art.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/reveal.js"></script>
+  <script src="../js/gallery-shell.js"></script>
+  <script src="../js/hall-switcher.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/gallery.js"></script>
+  <script src="../js/gallery-enter.js"></script>
+  <script src="../js/page-nav.js"></script>
+</body>
+</html>
