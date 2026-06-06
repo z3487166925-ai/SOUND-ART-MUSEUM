@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
-  <rect width="200" height="240" fill="#0a0a0a"/>
-  <path d="M55 120c0-35 20-55 45-55 30 0 45 25 45 55v80" stroke="#f5f5f5" stroke-width="3" stroke-linecap="round"/>
-  <path d="M145 120v80M55 200h90" stroke="#f5f5f5" stroke-width="3" stroke-linecap="round"/>
-  <path d="M100 65 L115 95 L85 95 Z" stroke="#9d4dff" stroke-width="2" fill="none"/>
-  <text x="100" y="228" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="14" letter-spacing="4">THANKS</text>
-</svg>
